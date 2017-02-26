@@ -173,10 +173,10 @@ class Maze(object):
         :return: list of integer like [64, 8, 2]
         """
         ch_list = []
-        for coin_val in sorted(ALL_ARRAY, reverse=True):
-            coin_count = cell_value / coin_val
-            ch_list += [coin_val, ] * coin_count
-            cell_value -= coin_val * coin_count
+        for _val in sorted(ALL_ARRAY, reverse=True):
+            val_count = cell_value / _val
+            ch_list += [_val, ] * val_count
+            cell_value -= _val * val_count
         return ch_list
 
     def _get_characteristics_by_point(self, point, characteristics_dict):
